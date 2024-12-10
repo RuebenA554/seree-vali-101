@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+body {
+  @apply bg-gray-900;
+}
+
+.bottom-nav-container {
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+}
+
+/* Add to Cart Button Styles */
+.add-to-cart {
+  @apply w-full mt-2 py-2 rounded-lg text-sm font-semibold bg-purple-600 text-white hover:bg-purple-700 transition-colors;
+}
+
+.add-to-cart.added {
+  @apply bg-green-500 hover:bg-green-600;
+}
+
+/* Item Card Styles */
+.item-card {
+  @apply flex flex-col;
+}
+
+.item-card .price {
+  @apply text-purple-600 font-bold mb-2;
+}
